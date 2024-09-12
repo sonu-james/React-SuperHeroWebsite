@@ -7,6 +7,8 @@ import About from './assets/pages/About'
 import GrievancePage from './assets/pages/GrievancePage'
 
 
+
+
 function App() {
  
 
@@ -17,6 +19,7 @@ function App() {
       <Route path='/about' element={<About/>}></Route>
       <Route path='/grivancepage' element={<GrievancePage/>}></Route>
      </Routes>
+    
     </>
   )
 }
