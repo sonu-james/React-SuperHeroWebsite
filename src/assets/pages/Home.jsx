@@ -8,30 +8,74 @@ import ChatBot from 'react-simple-chatbot';
 
 
 function Home() {
- 
+
   return (
     <>
-       
+
       <div id='home-page'>
-      <ChatBot steps={[
-    {
-      id: '1',
-      message: 'What is your name?',
-      trigger: '2',
-    },
-    {
-      id: '2',
-      user: true,
-      trigger: '3',
-    },
-    {
-      id: '3',
-      message: 'Hi {previousValue}, nice to meet you!',
-      end: true,
-    },
-  ]}
-      floating={true}
-      />
+        {/* code for chat bot */}
+        <ChatBot steps={[
+          {
+            id: '1',
+            message: 'What is your name?',
+            trigger: '2',
+          },
+          {
+            id: '2',
+            user: true,
+            trigger: '3',
+          },
+          {
+            id: '3',
+            message: 'Hi {previousValue}, nice to meet you!',
+            trigger: '4',
+          },
+          {
+            id: '4',
+            message: 'How can I help You?',
+            trigger: '5',
+          },
+
+          {
+            id: '5',
+            options: [
+              { value: 1, label: 'Trouble', trigger: '7' },
+              { value: 2, label: 'About Super Hero Power', trigger: '8' },
+
+            ],
+          },
+          {
+            id: '7',
+            message: 'Send Your Complaint through our website!,We will contact you soon',
+            trigger: '9',
+          },
+          {
+            id: '8',
+            message: 'A superhero is a character with extraordinary powers that performs heroic actions. Unlike police, firefighters or doctors, all of whom are heroes in their own right, superheroes are defined by their unique capabilities, such flight, strength, speed or invincibility (to name a few).',
+            trigger: '9',
+          },
+          {
+            id: '9',
+            message: 'Do you like to seen another screen',
+            trigger: '10',
+          },
+          {
+            id: '10',
+            options: [
+              { value: 1, label: 'Yes', trigger: '4' },
+              { value: 2, label: 'No Thanks', trigger: '11' },
+
+            ],
+          },
+          {
+            id: '11',
+            message: 'Thank you !!',
+            end: true,
+          },
+
+        ]}
+          floating={true}
+        />
         <Header />
         <Row className='w-100'>
           <Col sm={12} md={1}></Col>
@@ -66,7 +110,7 @@ function Home() {
                 <Col sm={12} md={6}>
                   <div className='mt-4'>
                     <h4 className='para'>CYCLOPS</h4>
-                    <p className='para' style={{textAlign:'justify'}}>Cyclops is a superhero appearing in American comic books published by Marvel Comics and is a founding member of the X-Men. Created by writer Stan Lee and artist/co-plotter Jack Kirby, the character first appeared in the comic book The X-Men. Cyclops is a member of a subspecies of humans known as mutants, born with superhuman abilities. Cyclops emits powerful beams of energy from his eyes and can only control the beams with the aid of special eyewear, which he must always wear. </p>
+                    <p className='para' style={{ textAlign: 'justify' }}>Cyclops is a superhero appearing in American comic books published by Marvel Comics and is a founding member of the X-Men. Created by writer Stan Lee and artist/co-plotter Jack Kirby, the character first appeared in the comic book The X-Men. Cyclops is a member of a subspecies of humans known as mutants, born with superhuman abilities. Cyclops emits powerful beams of energy from his eyes and can only control the beams with the aid of special eyewear, which he must always wear. </p>
                   </div>
                 </Col>
               </Row>
@@ -74,7 +118,7 @@ function Home() {
                 <Col sm={12} md={6} >
                   <div className=''>
                     <h4 className='para'>Caption America</h4>
-                    <p className='para'  style={{textAlign:'justify'}}>Captain America is a superhero created by Joe Simon and Jack Kirby who appears in American comic books published by Marvel Comics. The character first appeared in Captain America Comics #1, published on December 20, 1940, by Timely Comics, a corporate predecessor to Marvel. Captain America's civilian identity is Steve Rogers, a frail man enhanced to the peak of human physical perfection by an experimental "super-soldier serum" after joining the United States Army to aid the country's efforts in World War II. </p>
+                    <p className='para' style={{ textAlign: 'justify' }}>Captain America is a superhero created by Joe Simon and Jack Kirby who appears in American comic books published by Marvel Comics. The character first appeared in Captain America Comics #1, published on December 20, 1940, by Timely Comics, a corporate predecessor to Marvel. Captain America's civilian identity is Steve Rogers, a frail man enhanced to the peak of human physical perfection by an experimental "super-soldier serum" after joining the United States Army to aid the country's efforts in World War II. </p>
                   </div>
                 </Col>
                 <Col sm={12} md={6} className='d-flex justify-content-center align-items-center'>
@@ -88,7 +132,7 @@ function Home() {
                 <Col sm={12} md={6}>
                   <div className=''>
                     <h4 className='para'>Spider-Man</h4>
-                    <p className='para'  style={{textAlign:'justify'}}>Spider-Man in film dates back to 1977, the rights belonging to Marvel until 1999, when Sony bought them for $7 million.[1] He has been Marvel's most successful character in the cinema industry ever since. After selling the Spider-Man motion picture rights to Sony, Marvel eventually founded its own studio, developing the Marvel Cinematic Universe (MCU) based on the characters they still held the rights to.</p>
+                    <p className='para' style={{ textAlign: 'justify' }}>Spider-Man in film dates back to 1977, the rights belonging to Marvel until 1999, when Sony bought them for $7 million.[1] He has been Marvel's most successful character in the cinema industry ever since. After selling the Spider-Man motion picture rights to Sony, Marvel eventually founded its own studio, developing the Marvel Cinematic Universe (MCU) based on the characters they still held the rights to.</p>
                   </div>
                 </Col>
               </Row>
@@ -99,7 +143,7 @@ function Home() {
         </Row>
         <Footer />
       </div>
-    
+
     </>
 
   )

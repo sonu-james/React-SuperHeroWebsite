@@ -25,10 +25,10 @@ function Footer() {
         <Col sm={12} md={4} className='d-flex justify-content-center align-items-center flex-column mt-2'>
         <h3 className='mt-3'  style={{color:'#ff0000'}}>Follow With Us</h3>
        <div className='d-flex'>
-       <FontAwesomeIcon icon={faFacebook} size ='xl'className='me-4' />
-        <FontAwesomeIcon icon={faSquareInstagram}size ='xl' className='me-4'/>
-        <FontAwesomeIcon icon={faTwitter} size ='xl'  className='me-4' />
-        <FontAwesomeIcon icon={faTelegram} size ='xl' className='me-4'/>
+       <Link to='https://www.instagram.com/marvel/'style={{textDecoration:'none',color:'white'}}><FontAwesomeIcon icon={faFacebook} size ='xl'className='me-4' /></Link>
+       <Link to='https://www.instagram.com/marvel/'style={{textDecoration:'none',color:'white'}}><FontAwesomeIcon icon={faSquareInstagram}size ='xl' className='me-4'/></Link> 
+        <Link to='https://www.facebook.com/p/Superhero-World-100063519138576/?_rdr'style={{textDecoration:'none',color:'white'}}><FontAwesomeIcon icon={faTwitter} size ='xl'  className='me-4' /></Link>
+        {/* <FontAwesomeIcon icon={faTelegram} size ='xl' className='me-4'/> */}
        </div>
         </Col>
     </Row>
